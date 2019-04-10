@@ -84,9 +84,6 @@
                     <navigationItem key="navigationItem" title="Photos" id="r2q-iP-YBA">
                         <barButtonItem key="backBarButtonItem" title=" " id="FQ4-Iy-VEh"/>
                     </navigationItem>
-                    <connections>
-                        <segue destination="xvr-ko-Q2M" kind="show" identifier="ShowDetail" id="EvT-vQ-cns"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pdd-Ha-0zH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,17 +92,17 @@
         <!--Detail View Controller-->
         <scene sceneID="Fqn-iq-VWg">
             <objects>
-                <viewController id="xvr-ko-Q2M" customClass="DetailViewController" customModule="Photos_DucTran" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xvr-ko-Q2M" customClass="DetailViewController" customModule="Photos_DucTran" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B7k-oP-cii"/>
                         <viewControllerLayoutGuide type="bottom" id="Fcf-BU-iuw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wxc-Dr-Bgj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f2" translatesAutoresizingMaskIntoConstraints="NO" id="y0e-FF-zXW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="464"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

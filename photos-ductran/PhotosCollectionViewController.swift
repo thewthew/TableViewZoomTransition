@@ -75,17 +75,11 @@ class PhotosCollectionViewController: UICollectionViewController
         let image = UIImage(named: category.imageNames[indexPath.item])
         
         self.selectedIndexPath = indexPath
-        self.performSegue(withIdentifier: Storyboard.showDetailSegue, sender: image)
-    }
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.identifier == Storyboard.showDetailSegue {
-            let detailVC = segue.destination as! DetailViewController
-            detailVC.image = sender as! UIImage
-        }
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewControllerID") as! DetailViewController
+        detailViewController.image = image
+        show(detailViewController, sender: image)
     }
 }
 
